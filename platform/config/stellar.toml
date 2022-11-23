@@ -1,0 +1,23 @@
+ACCOUNTS = ["GB4AKMHFNTQQI2X2EHWI7SCGOTW6U3XDD6Y6XVYHZUAX67SKSI7QR5SG"]
+VERSION = "0.1.0"
+NETWORK_PASSPHRASE = "Test SDF Network ; September 2015"
+SIGNING_KEY = "GALDRERX6WZX4CMPE5HVPWD6543EAHZIFPLS2ECAHHJSCP4YOLBPQHIH"
+
+WEB_AUTH_ENDPOINT = "http://localhost:8080/auth"
+TRANSFER_SERVER_SEP0024 = "http://localhost:8080/sep24"
+
+[[CURRENCIES]]
+code = "USDC"
+issuer = "GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5"
+status = "test"
+is_asset_anchored = true
+anchor_asset_type = "fiat"
+anchor_asset = "USD"
+desc = "USDC is a fully collateralized US Dollar stablecoin, based on the open source fiat stablecoin framework developed by Centre."
+image = "https://www.centre.io/images/usdc/usdc-icon-86074d9d49.png"
+
+[DOCUMENTATION]
+ORG_NAME = "Stellar Development Foundation"
+ORG_URL = "https://stellar.org"
+ORG_DESCRIPTION = "The Stellar Development Foundation (SDF) is a non-profit organization whose mission is to create equitable access to the global financial system."
+ORG_GITHUB = "stellar"

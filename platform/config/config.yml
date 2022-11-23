@@ -1,0 +1,46 @@
+version: 1
+sep1:
+  enabled: true
+  toml:
+    type: file
+    value: /platform/config/stellar.toml
+sep10:
+  enabled: true
+sep24:
+  enabled: true
+  interactive_url: http://localhost:5000/login
+events:
+  enabled: true
+  publisher:
+    type: kafka
+    kafka:
+      bootstrap_server: http://host.docker.internal:29092
+data:
+  ddl_auto: update
+  type: sqlite
+  url: jdbc:sqlite:/platform/data/platform.db
+assets:
+  type: json
+  value: |
+    {
+      "assets": [
+        {
+          "code": "USDC",
+          "schema": "stellar",
+          "issuer": "GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5",
+          "distribution_account": "GB4AKMHFNTQQI2X2EHWI7SCGOTW6U3XDD6Y6XVYHZUAX67SKSI7QR5SG",
+          "significant_decimals": 7,
+          "sep24_enabled": true,
+          "deposit": {
+            "enabled": true,
+            "max_amount": 500,
+            "min_amount": 1
+          },
+          "withdraw": {
+            "enabled": true,
+            "max_amount": 500,
+            "min_amout": 1
+          }
+        }
+      ]
+    }
